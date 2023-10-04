@@ -17,6 +17,12 @@
       },
       "api": {
         "tgyenq0": {}
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "dekue7mlm8ppr",
+          "type": "manual"
+        }
       }
     }
   }

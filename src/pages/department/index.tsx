@@ -1,13 +1,7 @@
-import Dashboard from "@/components/Dashboard";
-import LoginForm from "@/components/forms/LoginForm";
-import TopNav from "@/components/navigation/AppNav";
-import Head from "next/head";
 import AppNav from "@/components/navigation/AppNav";
 import { Box, Button, Container, Toolbar, Typography } from "@mui/material";
-import Title from "@/components/Title";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import MainTable from "@/components/tables/MainTable";
 import DepartmentTable from "@/components/tables/DepartmentTable";
 import { Auth } from "aws-amplify";
 

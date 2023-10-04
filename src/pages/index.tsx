@@ -1,10 +1,9 @@
 import { Authenticator } from "@aws-amplify/ui-react";
-import { Amplify, API, Auth, withSSRContext } from "aws-amplify";
+import { Amplify, Auth } from "aws-amplify";
 import Head from "next/head";
 import awsExports from "@/aws-exports";
 import AppNav from "@/components/navigation/AppNav";
-import { Box, Button, Container, Toolbar, Typography } from "@mui/material";
-import Title from "@/components/Title";
+import { Box, Container, Toolbar, Typography } from "@mui/material";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import MainTable from "@/components/tables/MainTable";
@@ -12,8 +11,6 @@ import MainTable from "@/components/tables/MainTable";
 Amplify.configure({ ...awsExports, ssr: true });
 
 export default function Home() {
-  const router = useRouter();
-  const [id, setId] = useState("1");
   const [user, setUser] = useState("");
 
   useEffect(() => {
@@ -30,12 +27,6 @@ export default function Home() {
 
     getName();
   }, []);
-
-  const handleRoute = () => {
-    setId("17");
-    console.log("id: ", id);
-    router.push(`/employee/${id}`);
-  };
 
   return (
     <div className="bg-white h-screen">
